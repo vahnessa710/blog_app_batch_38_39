@@ -11,8 +11,9 @@
   <%= comment.body %>
 </p>
 
-<%= link_to 'Edit', edit_article_comment_path(@article, comment) %>
-
-<br>
+<div style="margin-top: 8px; font-size: 0.9rem;">
+  <%= link_to 'Edit', edit_article_comment_path(@article, comment), style: "margin-right: 10px; color: #1d4ed8; text-decoration: none;" %>
+  <%= link_to "See Comment", article_comment_path(@article, comment), style: "color: #4b5563; text-decoration: none;" %>
+</div>
 
 <% end %>

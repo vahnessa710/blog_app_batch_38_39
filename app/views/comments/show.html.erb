@@ -1,0 +1,15 @@
+<div class ="container">
+<h1>This is the show for comment.</h1>
+
+<p>
+  <strong>Commenter:</strong>
+  <%= @comment.commenter %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @comment.body %>
+</p>
+
+<%= link_to "Back to this article", article_path(@article) %>
+</div>

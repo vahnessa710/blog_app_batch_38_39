@@ -6,20 +6,20 @@ class CommentsController < ApplicationController
     @comments = @article.comments
   end
 
+  def show; end
+
   def create
     @comment = @article.comments.create(comment_params)
-    
-      if @comment.save
-        redirect_to @article, notice: "comment created successfully."
-      else
-        flash.alert = "Error in creating a comment"
-        render "articles/show", status: :unprocessable_entity
-      end
-    
+  
+    if @comment.save
+      redirect_to @article, notice: "comment created successfully."
+    else
+      flash.alert = "Error in creating a comment"
+      render "articles/show", status: :unprocessable_entity
+    end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @comment.update(comment_params)
@@ -37,17 +37,16 @@ class CommentsController < ApplicationController
   end
 
   private
-   
-    def set_article
-      @article = Article.find(params[:article_id])
-    end
 
-    def set_comment
-      @comment = @article.comments.find(params[:id])
-    end
+  def set_article
+    @article = Article.find(params[:article_id])
+  end
 
-    def comment_params
-      params.require(:comment).permit(:commenter, :body)
-    end
+  def set_comment
+    @comment = @article.comments.find(params[:id])
+  end
 
+  def comment_params
+    params.require(:comment).permit(:commenter, :body)
+  end
 end
