@@ -1,0 +1,16 @@
+<div class = "container">
+  <h1>Edit comment</h1>
+
+  <div class="comment-form">
+    <%= render "form" %>
+  </div>
+
+  <li>
+    <%= link_to "Delete this comment", article_comment_path(@article, @comment), data: {
+                      turbo_method: :delete,
+                      turbo_confirm: "Are you sure?"
+                    } %>
+  </li>
+
+  <%= link_to "back to home", articles_path %>
+</div>

@@ -1,0 +1,194 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+ /* article#index style */
+ body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+  }
+
+  .card {
+    padding: 16px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: all 0.2s ease-in-out;
+    background-color: #fafafa;
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+  }
+
+  .card p {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card a {
+    text-decoration: none;
+    color: #0077cc;
+    font-size: 14px;
+  }
+
+  .card a:hover {
+    text-decoration: underline;
+  }
+
+  .create-link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .create-link a {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #0077cc;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+  }
+
+  .create-link a:hover {
+    background-color: #005fa3;
+  }
+
+  .destroy-link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .destroy-link a {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: rgb(179, 14, 14);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+  }
+
+  .destroy-link a:hover {
+    background-color: hsl(0, 85%, 28%);
+  }
+
+  /* articles#show styles */
+
+.article-body {
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #555;
+}
+
+.action-links p {
+  margin: 5px 0;
+}
+
+
+.action-links a {
+  text-decoration: none;
+  color: #0077cc;
+  font-size: 16px;
+}
+
+.action-links a:hover {
+  text-decoration: underline;
+}
+
+
+a {
+  text-decoration: none;
+  color: #0077cc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+h2 {
+  margin-top: 40px;
+  font-size: 24px;
+  color: #333;
+}
+
+.comment-form {
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.comment-form input[type="submit"] {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.comment-form input[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+/* For the comments rendering (partial) */
+.comment {
+  background-color: #f7f7f7;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.comment p {
+  margin: 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.comment .comment-author {
+  font-weight: bold;
+  color: #0077cc;
+}

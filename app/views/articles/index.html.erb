@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Articles</h1>
+
+  <% @articles.each do |article| %>
+    <div class="card">
+      <p>
+        <%= article.title %>
+        <%= link_to "See Article", article %>
+      </p>
+    </div>
+  <% end %>
+
+  <div class="create-link">
+    <%= link_to "Create New Article", new_article_path %>
+  </div>
+</div>

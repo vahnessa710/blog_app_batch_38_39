@@ -1,0 +1,33 @@
+<div class = "container">
+<h1><%= @article.title %></h1>
+
+<div class="article-body">
+  <p style = "text-align: center;"><%= @article.body %></p>
+</div>
+
+<div class="create-link">
+  <p><%= link_to "Edit", edit_article_path(@article) %></p>
+</div>
+
+<div class="destroy-link">
+  <p><%= link_to "Destroy", article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></p>
+</div>
+
+<p> <%= link_to "Home", articles_path %> </p>
+<br>
+<p> <%= link_to "See all comments", article_comments_path(@article) %> </p>
+
+<h2>Comments:</h2>
+
+<%= render @article.comments %>
+
+
+<h2>Add a comment:</h2>
+
+<div class="comment-form">
+  <%= render "comments/form" %>
+</div>
+</div>
